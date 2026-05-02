@@ -30,14 +30,14 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
+  top: 100px;
   backdrop-filter: blur(4px);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   gap: 20px;
 }
 
 .landing_content {
- margin-top: 430px;
+  margin-top: 430px;
   margin-left: 100px;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -62,8 +62,10 @@
   margin-bottom: 10px;
 }
 
-.content p {
-  font-size: 25px;
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .divider {
@@ -74,15 +76,15 @@
 }
 
 .get-started-button {
-  padding: 15px 25px;
-  font-size: 23px;
+  padding: 8px 15px;
+  font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #4caf50;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 40px;
+  max-width: fit-content;
 }
 
 .get-started-button:hover {
@@ -113,6 +115,25 @@
 .product-list-container.visible {
   top: 0;
 }
+
+.container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1120px;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 15px;
+}
+.col-12 {
+  grid-column: span 12;
+}
+.col-6 {
+  grid-column: span 6;
+}
 /* LandingPage.css */
 @media screen and (max-width: 768px) {
   .content {
@@ -132,6 +153,10 @@
   .aboutus_container {
     margin-top: 20px; /* Adjust as needed */
     width: 80%; /* Adjust as needed */
+  }
+
+  .col-6 {
+    grid-column: span 12;
   }
 }
 
